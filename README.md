@@ -9,7 +9,7 @@ npm install express ejs
 アプリケーションを起動
 node app5.js
 ブラウザでアクセス
-http://localhost:8080 にアクセスして各機能を確認。
+http://localhost:8080 にアクセスして各機能を確認
 2. Git管理
 
 変更したファイル
@@ -21,7 +21,7 @@ luck.ejs
 janken.ejs
 acchimuitehoi.ejs
 rightorleft.ejs
-public/: 静的ファイル（例: 画像）
+public/: 静的ファイル
 Apple_logo_black.svg
 Git操作
 変更内容を追加
@@ -33,34 +33,34 @@ git push origin main
 3. 機能の説明と使用手順
 
 1. /hello1 と /hello2
-説明: 2種類の異なるメッセージを画面に表示する。
+説明:2種類の異なるメッセージを画面に表示する
 使用方法:
 /hello1 または /hello2 にアクセス。
 2. /icon
-説明: 静的な画像（Appleのロゴ）を表示する。
+説明:静的な画像（Appleのロゴ）を表示する
 使用方法:
 /icon にアクセス。
 3. /luck
-説明: ランダムに運勢（大吉、中吉、吉など）を表示。
+説明:ランダムに運勢（大吉、中吉、吉など）を表示する
 使用方法:
 /luck にアクセス。
 4. /janken
-説明: ユーザの手（グー、チョキ、パー）に対して、CPUの手をランダムに生成して勝敗を判定。
+説明:ユーザの手（グー、チョキ、パー）に対して、CPUの手をランダムに生成して勝敗を判定
 使用方法:
 /janken?hand=グー&win=0&total=0 のようにクエリパラメータで以下を指定：
 hand: ユーザの手（例: グー）
 win: 勝利数（初回は0）
 total: 総試合数（初回は0）
 5. /acchimuitehoi
-説明: ユーザの方向（上、下、左、右）とCPUの方向を比較して勝敗を判定。
+説明:ユーザの方向（上、下、左、右）とCPUの方向を比較して勝敗を判定
 使用方法:
-/acchimuitehoi?direction=上 のようにクエリパラメータで direction を指定。
-direction: ユーザが選んだ方向（例: 上）
+/acchimuitehoi?direction=上 のようにクエリパラメータで direction を指定
+direction: ユーザが選んだ方向
 6. /rightorleft
-説明: ユーザの選択（右または左）とCPUの選択を比較して勝敗を判定。
+説明:ユーザの選択（右または左）とCPUの選択を比較して勝敗を判定
 使用方法:
-/rightorleft?choice=右 のようにクエリパラメータで choice を指定。
-choice: ユーザの選択（例: 右）
+/rightorleft?choice=右 のようにクエリパラメータで choice を指定
+choice: ユーザの選択
 4. フォルダ構成
 
 project/
@@ -75,19 +75,15 @@ project/
 │   ├── acchimuitehoi.ejs
 │   └── rightorleft.ejs
 └── README.md
-れば教えてください！
 
 
 
 
 
 
-あなた:
-README.mdに記す内容を教えて
-ChatGPT:
 
-ChatGPT
-以下の内容を README.md に記載してください。これにより課題の要件を満たす、明確で整理されたドキュメントになる。
+
+
 
 app5.js ドキュメント
 
@@ -116,40 +112,38 @@ http://localhost:8080
 3. 機能説明
 
 1. /hello1 と /hello2
-説明: 指定されたメッセージを表示する。
+説明: 指定されたメッセージを表示
 使用方法:
-/hello1 または /hello2 にアクセスする。
+/hello1 または /hello2 にアクセス
 2. /icon
-説明: 静的な画像（Appleのロゴ）を表示する。
+説明: 静的な画像（Appleのロゴ）を表示
 使用方法:
-/icon にアクセスします。
+/icon にアクセス
 3. /luck
-説明: ランダムで運勢を表示します（例: 大吉、中吉、吉）。
+説明: ランダムで運勢を表示
 使用方法:
-/luck にアクセスする。
+/luck にアクセス
 4. /janken
-説明: じゃんけんゲーム。ユーザとCPUの手を比較し、勝敗を表示する。
+説明: じゃんけんゲーム。ユーザとCPUの手を比較し、勝敗を表示
 使用方法:
-以下のクエリパラメータを指定してアクセスする：
+以下のクエリパラメータを指定してアクセス：
 hand: ユーザの手（グー、チョキ、パー）
 win: 勝利数
 total: 総試合数
 例:
 /janken?hand=グー&win=0&total=0
 5. /acchimuitehoi
-説明: ユーザとCPUが選択した方向を比較して勝敗を判定する。
+説明: ユーザとCPUが選択した方向を比較して勝敗を判定
 使用方法:
-クエリパラメータ direction を指定してアクセスする。
+クエリパラメータ direction を指定してアクセス
 direction: ユーザが選んだ方向（上、下、左、右）
-例:
-/acchimuitehoi?direction=上
+
 6. /rightorleft
-説明: ユーザが選んだ右または左をCPUの選択と比較し、勝敗を判定する。
+説明: ユーザが選んだ右または左をCPUの選択と比較し、勝敗を判定
 使用方法:
-クエリパラメータ choice を指定してアクセスする。
+クエリパラメータ choice を指定してアクセス
 choice: ユーザが選んだ方向（右、左）
-例:
-/rightorleft?choice=右
+
 4. ファイル構成
 
 project/
