@@ -4,6 +4,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use("/public", express.static(__dirname + "/public"));
 
+
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
   const message2 = "Bon jour";
@@ -23,7 +24,7 @@ app.get("/luck", (req, res) => {
   let luck = '';
   if( num==1 ) luck = '大吉';
   else if( num==2 ) luck = '中吉';
-  console.log( 'あなたの運勢は' + luck + 'です' );
+  console.log( 'あなたの運勢は' + luck + 'だぞ' );
   res.render( 'luck', {number:num, luck:luck} );
 });
 
@@ -37,8 +38,7 @@ app.get("/janken", (req, res) => {
   if( num==1 ) cpu = 'グー';
   else if( num==2 ) cpu = 'チョキ';
   else cpu = 'パー';
-  // ここに勝敗の判定を入れる
-  // 今はダミーで人間の勝ちにしておく
+
   let judgement = '勝ち';
   win += 1;
   total += 1;
@@ -52,4 +52,31 @@ app.get("/janken", (req, res) => {
   res.render( 'janken', display );
 });
 
+
+app.get("/calculate", (req, res) => {
+  const num1 = Number(req.query.num1);
+  const num2 = Number(req.query.num2);
+  const operation = req.query.operation;
+  let result = 0;
+
+  if (operation === 'add') {
+    result = num1 + num2;
+  } else if (operation === 'multiply') {
+    result = num1 * num2;
+  }
+
+  res.render('calculate', { num1, num2, operation, result });
+});
+
+
+app.get("/datetime", (req, res) => {
+  const now = new Date();
+  const date = now.toLocaleDateString();
+  const time = now.toLocaleTimeString();
+
+  res.render('datetime', {date, time });
+});
+
 app.listen(8080, () => console.log("Example app listening on port 8080!"));
+
+
