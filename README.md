@@ -1,4 +1,3 @@
-# Node.js Web Application: Features and Usage
 
 ## 1. 起動方法
 
